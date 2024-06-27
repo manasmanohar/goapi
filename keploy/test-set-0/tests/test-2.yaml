@@ -1,0 +1,41 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-06-25T16:33:23.128974268Z
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "142"
+            Content-Type: application/json
+            Date: Thu, 27 Jun 2024 04:15:34 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    assertions:
+        noise:
+            body.address.zip_code: []
+            header.Date: []
+            header.date: []
+    created: 1719333389
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/user \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
+      --header 'Host: localhost:8080' \

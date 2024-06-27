@@ -1,0 +1,455 @@
+version: api.keploy.io/v1beta1
+name: test-set-0-report
+status: FAILED
+success: 5
+failure: 1
+total: 6
+tests:
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1719417775
+      completed: 1719417775
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      test_case_id: test-1
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-06-25T16:33:08.312521855Z
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "142"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 16:02:55 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        body.address.city: []
+        body.address.zip_code: []
+        body.id: []
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 16:36:12 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 16:02:55 GMT
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "142"
+              actual:
+                key: Content-Length
+                value:
+                    - "142"
+        body_result:
+            - normal: true
+              type: JSON
+              expected: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12346"}}
+              actual: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: FAILED
+      started: 1719417775
+      completed: 1719417775
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      test_case_id: test-2
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-06-25T16:33:23.128974268Z
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "142"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 16:02:55 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 16:36:27 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 16:02:55 GMT
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "142"
+              actual:
+                key: Content-Length
+                value:
+                    - "142"
+        body_result:
+            - normal: false
+              type: JSON
+              expected: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"123456"}}
+              actual: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1719417775
+      completed: 1719417775
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      test_case_id: test-3
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-06-25T16:33:24.109786232Z
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "142"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 16:02:55 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "142"
+              actual:
+                key: Content-Length
+                value:
+                    - "142"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 16:36:28 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 16:02:55 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+              actual: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1719417775
+      completed: 1719417775
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      test_case_id: test-4
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-06-25T16:33:24.798991334Z
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "142"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 16:02:55 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "142"
+              actual:
+                key: Content-Length
+                value:
+                    - "142"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 16:36:28 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 16:02:55 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+              actual: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1719417775
+      completed: 1719417775
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      test_case_id: test-5
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-06-25T16:33:25.415588594Z
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "142"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 16:02:55 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 16:36:29 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 16:02:55 GMT
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "142"
+              actual:
+                key: Content-Length
+                value:
+                    - "142"
+        body_result:
+            - normal: true
+              type: JSON
+              expected: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+              actual: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1719417775
+      completed: 1719417775
+      test_case_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      mock_path: /Users/sarthak_1/Documents/Keploy/Lima-workspace/goapi/keploy/test-set-0
+      test_case_id: test-6
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-06-25T16:33:26.206929742Z
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "142"
+            Content-Type: application/json
+            Date: Wed, 26 Jun 2024 16:02:55 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "142"
+              actual:
+                key: Content-Length
+                value:
+                    - "142"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 25 Jun 2024 16:36:30 GMT
+              actual:
+                key: Date
+                value:
+                    - Wed, 26 Jun 2024 16:02:55 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+              actual: |
+                {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
+        dep_result: []
+test_set: test-set-0
