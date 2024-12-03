@@ -1,0 +1,229 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/testing
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-12-03T13:25:39.315412694+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Tue, 03 Dec 2024 07:55:39 GMT
+        body: |-
+            {
+            		"id": 1,
+            		"name": "John Doe",
+            		"email": "john.doe@example.com",
+            		"address": {
+            			"street": "123 Main St",
+            			"city": "Anytown",
+            			"state": "CA",
+            			"zip_code": "12345",
+            			"coordinates": {
+            				"latitude": 37.7749,
+            				"longitude": -122.4194,
+            				"accuracy": "high"
+            			},
+            			"neighborhood": {
+            				"name": "Downtown",
+            				"population": 5000,
+            				"landmarks": [
+            					{
+            						"name": "City Hall",
+            						"type": "Government Buildings",
+            						"hours": {
+            							"monday": "9 AM - 5 PM",
+            							"tuesday": "9 AM - 5 PM",
+            							"wednesday": "9 AM - 5 PM",
+            							"thursday": "9 AM - 5 PM",
+            							"friday": "9 AM - 5 PM"
+            						}
+            					},
+            					{
+            						"name": "Central Park",
+            						"type": "Public Park",
+            						"hours": {
+            							"monday": "6 AM - 10 PM",
+            							"tuesday": "6 AM - 10 PM",
+            							"wednesday": "6 AM - 10 PM",
+            							"thursday": "6 AM - 10 PM",
+            							"friday": "6 AM - 10 PM",
+            							"saturday": "8 AM - 11 PM",
+            							"sunday": "8 AM - 11 PM"
+            						}
+            					}
+            				]
+            			}
+            		},
+            		"preferences": {
+            			"language": "en",
+            			"timezone": "PST",
+            			"notifications": {
+            				"email": true,
+            				"sms": false,
+            				"push": true,
+            				"preferences": {
+            					"email": {
+            						"frequency": "daily",
+            						"topics": ["updates", "offers", "news"]
+            					},
+            					"sms": {
+            						"frequency": "weekly",
+            						"topics": ["promotions"]
+            					}
+            				}
+            			}
+            		},
+            		"subscriptions": [
+            			{
+            				"plan_name": "Premium",
+            				"validity": "1 Year",
+            				"start_date": "2023-01-01",
+            				"end_date": "2023-12-31",
+            				"auto_renew": true,
+            				"features": [
+            					"Unlimited Access",
+            					"Priority Support",
+            					"Advanced Analytics"
+            				]
+            			},
+            			{
+            				"plan_name": "Standard",
+            				"validity": "6 Months",
+            				"start_date": "2023-06-01",
+            				"end_date": "2023-11-30",
+            				"auto_renew": false,
+            				"features": [
+            					"Basic Access",
+            					"Standard Support"
+            				]
+            			}
+            		],
+            		"friends": [
+            			{
+            				"id": 2,
+            				"name": "Jane Smith",
+            				"contact": {
+            					"email": "jane.smith@example.com",
+            					"phone": "+1234567890",
+            					"address": {
+            						"street": "456 Elm St",
+            						"city": "Othertown",
+            						"state": "CA",
+            						"zip_code": "67890"
+            					}
+            				},
+            				"preferences": {
+            					"language": "es",
+            					"timezone": "CET",
+            					"notifications": {
+            						"email": false,
+            						"sms": true
+            					}
+            				}
+            			},
+            			{
+            				"id": 3,
+            				"name": "Mark Johnson",
+            				"contact": {
+            					"email": "mark.johnson@example.com",
+            					"phone": "+0987654321",
+            					"address": {
+            						"street": "789 Oak St",
+            						"city": "Newcity",
+            						"state": "NY",
+            						"zip_code": "98765"
+            					}
+            				},
+            				"preferences": {
+            					"language": "en",
+            					"timezone": "EST",
+            					"notifications": {
+            						"email": true,
+            						"sms": true
+            					}
+            				}
+            			}
+            		],
+            		"employment": {
+            			"status": "Employed",
+            			"company": {
+            				"name": "Tech Innovations Inc.",
+            				"industry": "Software Development",
+            				"location": {
+            					"city": "San Francisco",
+            					"state": "CA",
+            					"zip_code": "94105"
+            				},
+            				"positions": [
+            					{
+            						"title": "Software Engineer",
+            						"department": "Engineering",
+            						"start_date": "2020-03-01",
+            						"end_date": null,
+            						"salary": {
+            							"currency": "USD",
+            							"amount": 120000
+            						}
+            					}
+            				]
+            			},
+            			"freelance_projects": [
+            				{
+            					"project_name": "Web App Development",
+            					"client": "XYZ Corp",
+            					"start_date": "2023-01-15",
+            					"end_date": "2023-06-15",
+            					"payment": {
+            						"currency": "USD",
+            						"amount": 25000
+            					}
+            				}
+            			]
+            		},
+            		"audit_logs": [
+            			{
+            				"timestamp": "2024-01-01T12:00:00Z",
+            				"action": "Login",
+            				"details": {
+            					"ip_address": "192.168.1.1",
+            					"device": "Laptop",
+            					"location": "San Francisco, CA"
+            				}
+            			},
+            			{
+            				"timestamp": "2024-01-02T14:30:00Z",
+            				"action": "Password Change",
+            				"details": {
+            					"ip_address": "192.168.1.2",
+            					"device": "Mobile Phone",
+            					"location": "Los Angeles, CA"
+            				}
+            			}
+            		]
+            	}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-12-03T13:25:41.38917603+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1733212541
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/testing \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
+      --header 'Host: localhost:8080' \
