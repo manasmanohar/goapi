@@ -1,0 +1,39 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user2
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-12-04T13:36:03.432476936+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "949"
+            Content-Type: application/json
+            Date: Wed, 04 Dec 2024 08:06:03 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345","coordinates":{"latitude":37.7749,"longitude":-122.4194,"accuracy":"high"},"neighborhood":{"name":"Downtown","population":5000,"landmarks":[{"name":"City Hall","type":"Government Building","hours":{"monday":"9 AM - 5 PM","tuesday":"9 AM - 5 PM","wednesday":"9 AM - 5 PM"}},{"name":"Central Park","type":"Public Park","hours":{"monday":"6 AM - 10 PM","tuesday":"6 AM - 10 PM","wednesday":"6 AM - 10 PM"}}]}},"preferences":{"language":"","timezone":"","notifications":{"email":false,"sms":false,"push":false,"preferences":{"email":{"frequency":"","topics":null},"sms":{"frequency":"","topics":null}}}},"subscriptions":null,"friends":null,"employment":{"status":"","company":{"name":"","industry":"","location":{"city":"","state":"","zip_code":""},"positions":null},"freelance_projects":null},"audit_logs":null}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-12-04T13:36:05.473514216+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1733299565
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/user2 \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \

@@ -21,7 +21,13 @@ test:
             body: {
           # To ignore some values for a field, pass regex patterns to the corresponding array value
           "name": [],
-          "address.neighborhood.landmarks[0].type":[],
+        #   "address.neighborhood.landmarks[0].type":[],
+          "address.street": [],
+          "address.neighborhood.name": [],
+          "preferences.notifications.preferences.email.frequency": [],
+          "preferences.notifications.preferences.sms.frequency": [],
+        #   "preferences.notifications.sms": [],
+          "preferences.notifications.preferences.email.topics": [],
         }
     }
         test-sets: {}
