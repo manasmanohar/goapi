@@ -28,6 +28,7 @@ test:
           "preferences.notifications.preferences.sms.frequency": [],
         #   "preferences.notifications.sms": [],
           "preferences.notifications.preferences.email.topics": [],
+        #   "address.neighborhood.landmarks[0].hours": [],
         }
     }
         test-sets: {}

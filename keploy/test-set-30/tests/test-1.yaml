@@ -1,0 +1,276 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/testing
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-12-06T13:29:48.006835801+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Fri, 06 Dec 2024 07:59:48 GMT
+        body: |
+            [
+                {
+                    "id": 1,
+                    "name": "John Doe",
+                    "email": "john.doe@example.com",
+                    "address": {
+                        "street": "123 Main St",
+                        "city": "Anytown",
+                        "state": "CA",
+                        "zip_code": "12345",
+                        "coordinates": {
+                            "latitude": 37.7749,
+                            "longitude": -122.4194,
+                            "accuracy": "high"
+                        },
+                        "neighborhood": {
+                            "name": "Downtown",
+                            "population": 5000,
+                            "landmarks": [
+                                {
+                                    "name": "City Hall",
+                                    "type": "Government Building",
+                                    "hours": {
+                                        "monday": "9 AM - 5 PM",
+                                        "tuesday": "9 AM - 5 PM",
+                                        "wednesday": "9 AM - 5 PM"
+                                    }
+                                },
+                                {
+                                    "name": "Central Park",
+                                    "type": "Public Park",
+                                    "hours": {
+                                        "monday": "6 AM - 10 PM",
+                                        "tuesday": "6 AM - 10 PM",
+                                        "wednesday": "6 AM - 10 PM"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "preferences": {
+                        "language": "en",
+                        "timezone": "PST",
+                        "notifications": {
+                            "email": true,
+                            "sms": false,
+                            "push": true,
+                            "preferences": {
+                                "email": {
+                                    "frequency": "dailyxxxx",
+                                    "topics": ["updates", "offerssdf", "news"]
+                                },
+                                "sms": {
+                                    "frequency": "weekly",
+                                    "topics": ["promotions"]
+                                }
+                            }
+                        }
+                    },
+                    "subscriptions": [
+                        {
+                            "plan_name": "Premium",
+                            "validity": "1 Year",
+                            "start_date": "2023-01-01",
+                            "end_date": "2023-12-31",
+                            "auto_renew": true,
+                            "features": ["Unlimited Access", "Priority Support", "Advanced Analytics"]
+                        },
+                        {
+                            "plan_name": "Standard",
+                            "validity": "6 Months",
+                            "start_date": "2023-06-01",
+                            "end_date": "2023-11-30",
+                            "auto_renew": false,
+                            "features": ["Basic Access", "Standard Support"]
+                        }
+                    ],
+                    "friends": [
+                        {
+                            "id": 2,
+                            "name": "Jane Smith",
+                            "contact": {
+                                "email": "jane.smith@example.com",
+                                "phone": "+1234567890",
+                                "address": {
+                                    "street": "456 Elm Street",
+                                    "city": "Othertown",
+                                    "state": "CA",
+                                    "zip_code": "67890",
+                                    "coordinates": {
+                                        "latitude": 34.0522,
+                                        "longitude": -118.2437,
+                                        "accuracy": "medium"
+                                    },
+                                    "neighborhood": {
+                                        "name": "Uptown",
+                                        "population": 3000,
+                                        "landmarks": [
+                                            {
+                                                "name": "Uptown Library",
+                                                "type": "Public Library",
+                                                "hours": {
+                                                    "monday": "10 AM - 6 PM",
+                                                    "tuesday": "10 AM - 6 PM",
+                                                    "wednesday": "10 AM - 6 PM"
+                                                }
+                                            },
+                                            {
+                                                "name": "Riverside Park",
+                                                "type": "Public Park",
+                                                "hours": {
+                                                    "monday": "5 AM - 11 PM",
+                                                    "tuesday": "5 AM - 11 PM",
+                                                    "wednesday": "5 AM - 11 PM"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "preferences": {
+                                "language": "es",
+                                "timezone": "CET",
+                                "notifications": {
+                                    "email": false,
+                                    "sms": true
+                                }
+                            }
+                        },
+                        {
+                            "id": 3,
+                            "name": "Mark Johnson",
+                            "contact": {
+                                "email": "mark.johnson@example.com",
+                                "phone": "+0987654321",
+                                "address": {
+                                    "street": "789 Oak St",
+                                    "city": "Newcity",
+                                    "state": "NY",
+                                    "zip_code": "98765",
+                                    "coordinates": {
+                                        "latitude": 40.7128,
+                                        "longitude": -74.006,
+                                        "accuracy": "high"
+                                    },
+                                    "neighborhood": {
+                                        "name": "Midtown",
+                                        "population": 4000,
+                                        "landmarks": [
+                                            {
+                                                "name": "Midtown Museum",
+                                                "type": "Cultural Institution",
+                                                "hours": {
+                                                    "monday": "9 AM - 5 PM",
+                                                    "tuesday": "9 AM - 5 PM",
+                                                    "wednesday": "9 AM - 5 PM"
+                                                }
+                                            },
+                                            {
+                                                "name": "Grand Central Park",
+                                                "type": "Public Park",
+                                                "hours": {
+                                                    "monday": "6 AM - 10 PM",
+                                                    "tuesday": "6 AM - 10 PM",
+                                                    "wednesday": "6 AM - 10 PM"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "preferences": {
+                                "language": "en",
+                                "timezone": "EST",
+                                "notifications": {
+                                    "email": true,
+                                    "sms": true
+                                }
+                            }
+                        }
+                    ],
+                    "employment": {
+                        "status": "Employed",
+                        "company": {
+                            "name": "Tech Innovations Inc.",
+                            "industry": "Software Development",
+                            "location": {
+                                "city": "San Francisco",
+                                "state": "CA",
+                                "zip_code": "94105"
+                            },
+                            "positions": [
+                                {
+                                    "title": "Software Engineer",
+                                    "department": "Engineering",
+                                    "start_date": "2020-03-01",
+                                    "end_date": null,
+                                    "salary": {
+                                        "currency": "USD",
+                                        "amount": 120000
+                                    }
+                                }
+                            ]
+                        },
+                        "freelance_projects": [
+                            {
+                                "project_name": "Web App Development",
+                                "client": "XYZ Corp",
+                                "start_date": "2023-01-15",
+                                "end_date": "2023-06-15",
+                                "payment": {
+                                    "currency": "USD",
+                                    "amount": 25000
+                                }
+                            }
+                        ]
+                    },
+                    "audit_logs": [
+                        {
+                            "timestamp": "2024-01-01T12:00:00Z",
+                            "action": "Login",
+                            "details": {
+                                "ip_address": "192.168.1.1",
+                                "device": "Laptop",
+                                "location": "San Francisco, CA"
+                            }
+                        },
+                        {
+                            "timestamp": "2024-01-02T14:30:00Z",
+                            "action": "Password Change",
+                            "details": {
+                                "ip_address": "192.168.1.2",
+                                "device": "Mobile Phone",
+                                "location": "Los Angeles, CA"
+                            }
+                        }
+                    ]
+                },
+            ]
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-12-06T13:29:50.061360383+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1733471990
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/testing \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
