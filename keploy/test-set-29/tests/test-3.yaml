@@ -18,11 +18,11 @@ spec:
         status_code: 200
         header:
             Content-Type: application/json
-            Date: Wed, 04 Dec 2024 08:06:16 GMT
+            Date: Thu, 05 Dec 2024 12:28:41 GMT
         body: |-
             {
             		"id": 1,
-            		"name": "John Doeww",
+            		"name": "John Doe",
             		"email": "john.doe@example.com",
             		"address": {
             			"street": "123 Main St",
@@ -70,15 +70,15 @@ spec:
             			"timezone": "PST",
             			"notifications": {
             				"email": true,
-            				"sms": true,
+            				"sms": false,
             				"push": true,
             				"preferences": {
             					"email": {
-            						"frequency": "dailys",
-            						"topics": ["updates", "offers", "news123"]
+            						"frequency": "daily",
+            						"topics": ["updates", "offers", "news"]
             					},
             					"sms": {
-            						"frequency": "weeklys123",
+            						"frequency": "weekly",
             						"topics": ["promotions"]
             					}
             				}
@@ -212,10 +212,10 @@ spec:
             			}
             		]
             	}
-        status_message: OK
+        status_message: ""
         proto_major: 0
         proto_minor: 0
-        timestamp: 2024-12-04T13:36:18.292977998+05:30
+        timestamp: 0001-01-01T00:00:00Z
     objects: []
     assertions:
         noise:
@@ -224,6 +224,6 @@ spec:
 curl: |
     curl --request GET \
       --url http://localhost:8080/testing \
-      --header 'Host: localhost:8080' \
       --header 'User-Agent: curl/7.88.1' \
       --header 'Accept: */*' \
+      --header 'Host: localhost:8080' \
