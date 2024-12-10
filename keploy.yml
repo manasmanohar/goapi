@@ -24,11 +24,15 @@ test:
         #   "address.neighborhood.landmarks[0].type":[],
           "address.street": [],
           "address.neighborhood.name": [],
+          "address.coordinates.latitude": [],
+          "address.neighborhood.landmarks[0].type": [],
           "preferences.notifications.preferences.email.frequency": [],
           "preferences.notifications.preferences.sms.frequency": [],
         #   "preferences.notifications.sms": [],
           "preferences.notifications.preferences.email.topics": [],
         #   "address.neighborhood.landmarks[0].hours": [],
+        "address.neighborhood.landmarks": [],
+        "address.neighborhood.population": ["^50000$"],
         }
     }
         test-sets: {}
