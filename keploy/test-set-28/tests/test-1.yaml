@@ -29,6 +29,12 @@ spec:
     objects: []
     assertions:
         noise:
+            body.employment.freelance_projects: []
+            body.employment.status: []
+            body.friends: []
+            body.preferences.notifications: []
+            body.preferences.notifications.email: []
+            body.preferences.notifications.preferences.sms.topics: []
             header.Date: []
     created: 1733255756
 curl: |

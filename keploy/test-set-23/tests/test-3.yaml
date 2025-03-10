@@ -29,6 +29,7 @@ spec:
     objects: []
     assertions:
         noise:
+            body.company.location: []
             header.Date: []
     created: 1733208914
 curl: |

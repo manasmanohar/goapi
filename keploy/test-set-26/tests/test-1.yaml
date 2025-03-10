@@ -29,11 +29,16 @@ spec:
     objects: []
     assertions:
         noise:
+            body: []
+            body.address.state: []
+            body.address.street: []
+            header.Content-Length: []
+            header.Content-Type: []
             header.Date: []
     created: 1733232563
 curl: |
     curl --request GET \
       --url http://localhost:8080/user \
-      --header 'Host: localhost:8080' \
-      --header 'Accept: */*' \
       --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
+      --header 'Host: localhost:8080' \

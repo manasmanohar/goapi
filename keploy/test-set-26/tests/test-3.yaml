@@ -29,11 +29,15 @@ spec:
     objects: []
     assertions:
         noise:
+            body.email: []
+            body.id: []
+            body.location: []
+            body.timezone: []
             header.Date: []
     created: 1733232566
 curl: |
     curl --request GET \
       --url http://localhost:8080/user \
       --header 'Accept: */*' \
-      --header 'User-Agent: curl/7.88.1' \
       --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.88.1' \

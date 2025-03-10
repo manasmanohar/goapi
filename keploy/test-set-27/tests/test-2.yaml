@@ -74,6 +74,25 @@ spec:
     objects: []
     assertions:
         noise:
+            body.address: []
+            body.address.city: []
+            body.address.coordinates: []
+            body.address.coordinates.accuracy: []
+            body.address.coordinates.latitude: []
+            body.address.neighborhood.landmarks[0].hours.friday: []
+            body.address.neighborhood.landmarks[0].hours.tuesday: []
+            body.address.neighborhood.landmarks[0].hours.wednesday: []
+            body.address.neighborhood.landmarks[0].name: []
+            body.address.neighborhood.landmarks[1].hours.friday: []
+            body.address.neighborhood.landmarks[1].hours.saturday: []
+            body.address.neighborhood.landmarks[1].hours.sunday: []
+            body.address.neighborhood.landmarks[1].hours.wednesday: []
+            body.address.neighborhood.landmarks[1].name: []
+            body.address.neighborhood.landmarks[1].type: []
+            body.address.neighborhood.name: []
+            body.address.state: []
+            body.id: []
+            body.name: []
             header.Date: []
     created: 1733234489
 curl: |

@@ -29,6 +29,15 @@ spec:
     objects: []
     assertions:
         noise:
+            body.address.neighborhood.landmarks[1].hours.monday: []
+            body.address.neighborhood.landmarks[1].hours.tuesday: []
+            body.address.neighborhood.name: []
+            body.audit_logs: []
+            body.employment.company.positions: []
+            body.preferences.notifications.preferences.email.frequency: []
+            body.preferences.notifications.push: []
+            body.subscriptions: []
+            header.Content-Length: []
             header.Date: []
     created: 1733299565
 curl: |

@@ -1,0 +1,58 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/user
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2025-03-08T18:55:00.060032879+05:30
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "659"
+            Content-Type: application/json
+            Date: Sat, 08 Mar 2025 13:25:00 GMT
+        body: |
+            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345","coordinates":{"latitude":0,"longitude":0,"accuracy":""},"neighborhood":{"name":"","population":0,"landmarks":null}},"preferences":{"language":"","timezone":"","notifications":{"email":false,"sms":false,"push":false,"preferences":{"email":{"frequency":"","topics":null},"sms":{"frequency":"","topics":null}}}},"subscriptions":null,"friends":null,"employment":{"status":"","company":{"name":"","industry":"","location":{"city":"","state":"","zip_code":""},"positions":null},"freelance_projects":null},"audit_logs":null}
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2025-03-08T18:55:02.104208488+05:30
+    objects: []
+    assertions:
+        noise:
+            body.address.coordinates: []
+            body.address.neighborhood: []
+            body.address.state: []
+            body.audit_logs: []
+            body.body.employment.company: []
+            body.body.employment.company.industry: []
+            body.body.employment.company.location: []
+            body.body.employment.company.location.city: []
+            body.body.employment.company.name: []
+            body.body.employment.company.positions: []
+            body.body.employment.freelance_projects: []
+            body.body.employment.status: []
+            body.employment.company.location.state: []
+            body.employment.company.location.zip_code: []
+            body.employment.freelance_projects: []
+            body.employment.status: []
+            body.preferences: []
+            body.preferences.language: []
+            body.preferences.notifications: []
+            header.Date: []
+    created: 1741440302
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/user \
+      --header 'Accept: */*' \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.88.1' \

@@ -17,23 +17,94 @@ spec:
     resp:
         status_code: 200
         header:
-            Content-Length: "142"
+            Content-Length: "659"
             Content-Type: application/json
-            Date: Tue, 03 Dec 2024 13:29:22 GMT
-        body: |
-            {"id":1,"name":"John Doe","email":"john.doe@example.com","address":{"street":"123 Main St","city":"Anytown","state":"CA","zip_code":"12345"}}
-        status_message: OK
+            Date: Sat, 08 Mar 2025 13:28:46 GMT
+        body: '{"address":{"city":"Anytown","coordinates":{"accuracy":"","latitude":0,"longitude":0},"neighborhood":{"landmarks":null,"name":"","population":0},"state":"CA","street":"123 Main St","zip_code":"12345"},"audit_logs":null,"email":"john.doe@example.com","employment":{"company":{"industry":"","location":{"city":"","state":"","zip_code":""},"name":"","positions":null},"freelance_projects":null,"status":""},"friends":null,"id":1,"name":"John Doe","preferences":{"language":"","notifications":{"email":false,"preferences":{"email":{"frequency":"","topics":null},"sms":{"frequency":"","topics":null}},"push":false,"sms":false},"timezone":""},"subscriptions":null}'
+        status_message: ""
         proto_major: 0
         proto_minor: 0
-        timestamp: 2024-12-03T18:59:24.560968028+05:30
+        timestamp: 0001-01-01T00:00:00Z
     objects: []
     assertions:
         noise:
-            header.Date: []
+            body.address: []
+            body.address.city: []
+            body.address.coordinates: []
+            body.address.coordinates.accuracy: []
+            body.address.coordinates.latitude: []
+            body.address.coordinates.longitude: []
+            body.address.neighborhood: []
+            body.address.neighborhood.name: []
+            body.address.street: []
+            body.body: []
+            body.body.address: []
+            body.body.address.city: []
+            body.body.address.coordinates: []
+            body.body.address.coordinates.accuracy: []
+            body.body.address.coordinates.latitude: []
+            body.body.address.coordinates.longitude: []
+            body.body.address.neighborhood: []
+            body.body.address.neighborhood.landmarks: []
+            body.body.address.neighborhood.name: []
+            body.body.address.neighborhood.population: []
+            body.body.address.state: []
+            body.body.address.street: []
+            body.body.address.zip_code: []
+            body.body.audit_logs: []
+            body.body.email: []
+            body.body.employment: []
+            body.body.employment.company: []
+            body.body.employment.company.industry: []
+            body.body.employment.company.location: []
+            body.body.employment.company.location.city: []
+            body.body.employment.company.location.state: []
+            body.body.employment.company.location.zip_code: []
+            body.body.employment.company.positions: []
+            body.body.employment.freelance_projects: []
+            body.body.employment.status: []
+            body.body.friends: []
+            body.body.id: []
+            body.body.name: []
+            body.body.preferences: []
+            body.body.preferences.language: []
+            body.body.preferences.notifications: []
+            body.body.preferences.notifications.email: []
+            body.body.preferences.notifications.preferences: []
+            body.body.preferences.notifications.preferences.email: []
+            body.body.preferences.notifications.preferences.email.frequency: []
+            body.body.preferences.notifications.preferences.email.topics: []
+            body.body.preferences.notifications.preferences.sms: []
+            body.body.preferences.notifications.preferences.sms.frequency: []
+            body.body.preferences.notifications.preferences.sms.topics: []
+            body.body.preferences.notifications.push: []
+            body.body.preferences.notifications.sms: []
+            body.body.preferences.timezone: []
+            body.body.subscriptions: []
+            body.employment.company.industry: []
+            body.employment.company.location: []
+            body.employment.company.location.city: []
+            body.employment.company.location.state: []
+            body.employment.company.name: []
+            body.preferences.language: []
+            body.preferences.notifications: []
+            body.preferences.notifications.email: []
+            body.preferences.notifications.preferences: []
+            body.preferences.notifications.preferences.email: []
+            body.preferences.notifications.preferences.email.frequency: []
+            body.preferences.notifications.preferences.email.topics: []
+            body.preferences.notifications.preferences.sms.frequency: []
+            body.preferences.notifications.preferences.sms.topics: []
+            body.preferences.notifications.push: []
+            body.preferences.notifications.sms: []
+            body.preferences.timezone: []
+            body.subscriptions: []
+            header.Content-Length: []
+            header.Content-Type: []
     created: 1733232564
 curl: |
     curl --request GET \
       --url http://localhost:8080/user \
-      --header 'Accept: */*' \
       --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \
       --header 'Host: localhost:8080' \
