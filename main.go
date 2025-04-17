@@ -206,6 +206,7 @@ func userHandler2(w http.ResponseWriter, r *http.Request) {
 	// Set the Content-Type header to application/json
 	w.Header().Set("Content-Type", "application/json")
 
+	
 	// Encode the user struct to JSON and write it to the response
 	if err := json.NewEncoder(w).Encode(user); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
