@@ -215,6 +215,7 @@ func userHandler2(w http.ResponseWriter, r *http.Request) {
 
 func testingHandler2(w http.ResponseWriter, r *http.Request) {
 	// Directly define the JSON string to be returned
+	
 	jsonResponse := `{
 		"id": 1,
 		"name": "John Doe",
