@@ -147,6 +147,7 @@ func userHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+
 func userHandler2(w http.ResponseWriter, r *http.Request) {
 	// Create a sample nested JSON response
 	user := User{
