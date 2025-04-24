@@ -6,6 +6,7 @@ import (
 )
 
 
+
 type Address struct {
 	Street      string `json:"street"`
 	City        string `json:"city"`
