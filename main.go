@@ -123,6 +123,7 @@ type User struct {
 	} `json:"audit_logs"`
 }
 
+
 func userHandler(w http.ResponseWriter, r *http.Request) {
 	// Create a sample nested JSON response
 	user := User{
