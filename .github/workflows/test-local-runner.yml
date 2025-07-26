@@ -1,0 +1,55 @@
+name: Test Local Runner
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [main]
+
+jobs:
+  test-tartelet:
+    runs-on: [self-hosted, macos, tartelet]  # Your runner labels
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: 🎉 Success Message
+      run: |
+        echo "🚀 SUCCESS: Running on local macOS runner!"
+        echo "============================================"
+        
+    - name: System Information  
+      run: |
+        echo "System Details:"
+        echo "---------------"
+        echo "macOS Version: $(sw_vers -productVersion)"
+        echo "Architecture: $(uname -m)"
+        echo "Hostname: $(hostname)"
+        echo "User: $(whoami)"
+        echo "Date: $(date)"
+        
+    - name: Development Environment
+      run: |
+        echo "Pre-installed Tools:"
+        echo "-------------------"
+        git --version
+        curl --version | head -1
+        
+    - name: Performance Test
+      run: |
+        echo "Performance Check:"
+        echo "-----------------"
+        echo "CPU Info:"
+        sysctl -n machdep.cpu.brand_string
+        echo "Memory:"
+        top -l 1 -s 0 | grep PhysMem
+        echo "Disk Space:"
+        df -h / | tail -1
+        
+    - name: Network Test
+      run: |
+        echo "Network Connectivity:"
+        echo "--------------------"
+        ping -c 3 8.8.8.8
+        echo "GitHub API reachable:"
+        curl -s https://api.github.com/zen
